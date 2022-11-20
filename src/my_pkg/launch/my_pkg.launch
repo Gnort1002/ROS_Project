@@ -1,0 +1,10 @@
+<launch>
+
+    <include file="$(find astra_camera)/launch/astra.launch"/>
+    
+    <node cwd = "node" name="run_rgb" pkg="my_pkg" type="rgb.py" output="screen"/>
+
+    <node cwd = "node" name="run_depth" pkg="my_pkg" type="depth.py" output="screen"/>
+
+    <node cwd = "node" name="run_optflow" pkg="my_pkg" type="optical_flow.py" output="screen"/>
+</launch>
